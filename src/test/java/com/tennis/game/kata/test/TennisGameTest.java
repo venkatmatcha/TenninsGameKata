@@ -8,12 +8,7 @@ import org.junit.Test;
 import com.tennis.game.kata.TennisGame;
 import com.tennis.game.kata.TennisPlayer;
 
-public class GameTest {
-
-	TennisPlayer matcha;
-	TennisPlayer sharief;
-	
-	TennisGame game;
+public class TennisGameTest {
 
 	@Before
 	public void beforeGameTest() {
@@ -33,7 +28,7 @@ public class GameTest {
 		sharief.gainPoint();
 		assertEquals(game.getScore(), "0, 15");
 	}
-	
+
 	@Test
 	public void fifteenThirtyScoreTest() {
 		sharief.gainPoint();
@@ -76,4 +71,7 @@ public class GameTest {
 		assertEquals(game.getScore(), "Matcha has won the game");
 	}
 
+	TennisPlayer matcha;
+	TennisPlayer sharief;
+	TennisGame game;
 }
